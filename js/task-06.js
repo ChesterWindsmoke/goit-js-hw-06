@@ -1,38 +1,26 @@
-//Знаходимо input
-const inputRef = document.querySelector('#validation-input');
+
+const inputRef = document.getElementById('validation-input');
 
 inputRef.addEventListener('blur', onInputBlur);
 
+const dataLength = inputRef.getAttribute('data-length');
 
 function onInputBlur(event) {
-    if (event.currentTarget.value.length === Number(inputRef.getAttribute('data-length'))) {
-        inputRef.classList.add('#validation-input.valid')
-        inputRef.classList.remove('#validation-input.invalid')
+    const valueLength = event.target.value.trim().length;
+    if ( Number(dataLength) === valueLength) {
+        inputRef.classList.add('valid')
+        inputRef.classList.remove('invalid')
     }
     
     else {
-        inputRef.classList.add('#validation-input.invalid')
-        inputRef.classList.remove('#validation-input.valid')
+        inputRef.classList.add('invalid')
+        inputRef.classList.remove('valid')
     }
 }
 
 
 
 
-const inputText = document.getElementById('validation-input');
-inputText.addEventListener('blur', addBorderColor);
-const dataLength = inputText.getAttribute('data-length');
-function addBorderColor(event) {
-    const valueLength = event.target.value.trim().length;
-    if (Number(dataLength) === valueLength) {
-        inputText.classList.add('valid');
-        inputText.classList.remove('invalid');
-    }
-    else {
-        inputText.classList.add('invalid');
-        inputText.classList.remove('valid');
-    }
-}
 
 
 
