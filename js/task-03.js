@@ -21,5 +21,10 @@ const ulList = document.querySelector('.gallery');
 
 ulList.insertAdjacentHTML('beforeend', imageItems);
 
+ulList.setAttribute('style', 'list-style: none;');
+
+
+
+
 
 
