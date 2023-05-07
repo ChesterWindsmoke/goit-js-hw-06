@@ -1,11 +1,6 @@
-const inputEl = document.getElementById('font-size-control');
+const fontSizeControl = document.querySelector('#font-size-control');
+const text = document.querySelector('#text');
 
-const inputRange = function () {
-    console.log(inputEl.type.this.value);
-};
-
-
-
-// inputEl.ge= function () {
-//     console.log(this.value);
-// };
+fontSizeControl.addEventListener('input', () => {
+  text.style.fontSize = `${fontSizeControl.value}px`;
+});
