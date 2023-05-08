@@ -1,6 +1,6 @@
-
+// Знаходимо input 
 const inputRef = document.getElementById('validation-input');
-
+// Додаємо слухача подій на input
 inputRef.addEventListener('blur', onInputBlur);
 
 const dataLength = inputRef.getAttribute('data-length');
